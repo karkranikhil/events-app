@@ -5,3 +5,6 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
+
+
+//this file returns the current page
