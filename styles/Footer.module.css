@@ -1,0 +1,10 @@
+.footer {
+  margin: 100px 0 40px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.footer p {
+  margin: 5px 0;
+}

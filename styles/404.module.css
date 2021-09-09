@@ -1,0 +1,16 @@
+.error {
+  text-align: center;
+  margin: 100px 0 200px;
+}
+
+.error h1 {
+  font-size: 50px;
+}
+.error h2 {
+  font-size: 36px;
+}
+.bgImage{
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
