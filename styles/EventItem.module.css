@@ -4,7 +4,10 @@
   align-items: center;
   margin: 20px 0;
   padding: 13px;
+  border: 1px solid #ddd;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+  background: #f4f4f4;
+    border-radius: 9px;
 }
 
 .img {

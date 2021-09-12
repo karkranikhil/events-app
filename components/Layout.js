@@ -7,6 +7,7 @@ import styles from '@/styles/Layout.module.css'
 
 export default function Layout({title, keywords, description, children}) {
   const router = useRouter()
+  console.log(router)
   return (
     <div>
       <Head>
@@ -16,6 +17,10 @@ export default function Layout({title, keywords, description, children}) {
       </Head>
       <Header/>
       {router.pathname === '/' && <Showcase/>}
+      {router.pathname === '/events' && <Showcase heading="Events"/>}
+      {router.pathname === '/events/add' && <Showcase heading="Add Events" goBack="true"/>}
+      {router.pathname === '/account/dashboard' && <Showcase heading="Dashboard"/>}
+      
       <div className={styles.container}>
       {children}
       </div>

@@ -2,7 +2,7 @@
   background: url('https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_xy_center,h_650,q_auto:good,w_2560,x_w_mul_0.5,y_h_mul_0.0/v1/gcs/platform-data-salesforce/chapter_banners/2018%2008%20-%20BEVY%20-%20Group%20Event%20Banners%20v03_Group%20Banner%20-%20Data.png?lg');
   color: #032e61 ;
   background-position: 50% 50%;
-  height: 360px;
+  height: 433px;
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,7 +13,21 @@
   justify-content: center;
   text-align: center;
 }
-
+.heading {
+  background: url('https://www.salesforce.com/content/dam/web/en_us/events-master/dreamforce-2021/speakers-header-blue.png');
+  color: #032e61 ;
+  background-position: 50% 50%;
+  height: 200px;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .showcase::after {
   content: '';
   position: absolute;
@@ -27,13 +41,19 @@
 .showcase * {
   z-index: 20;
 }
-
+.heading h1{
+  font-size: 50px;
+  margin-bottom: 0;
+}
 .showcase h1 {
   font-size: 40px;
   margin-bottom: 0;
 }
 @media (max-width: 768px) {
   .showcase h1 {
+    font-size: 38px;
+  }
+  .heading h1 {
     font-size: 38px;
   }
 }

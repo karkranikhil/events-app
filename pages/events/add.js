@@ -1,11 +1,11 @@
-// import { parseCookies } from '@/helpers/index'
+import { parseCookies } from '@/helpers/index'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
-import { API_URL } from '@config/index'
+import { API_URL } from '@/config/index'
 import styles from '@/styles/Form.module.css'
 
 export default function AddEventPage({ token }) {
@@ -37,7 +37,7 @@ export default function AddEventPage({ token }) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          // Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(values),
       })
@@ -63,8 +63,7 @@ export default function AddEventPage({ token }) {
 
   return (
     <Layout title='Add New Event'>
-      <Link href='/events'>Go Back</Link>
-      <h1>Add Event</h1>
+      {/* <h1>Add Event</h1> */}
       <ToastContainer />
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.grid}>
@@ -147,12 +146,12 @@ export default function AddEventPage({ token }) {
   )
 }
 
-// export async function getServerSideProps({ req }) {
-//   const { token } = parseCookies(req)
+export async function getServerSideProps({ req }) {
+  const { token } = parseCookies(req)
 
-//   return {
-//     props: {
-//       token,
-//     },
-//   }
-// }
+  return {
+    props: {
+      token,
+    },
+  }
+}
