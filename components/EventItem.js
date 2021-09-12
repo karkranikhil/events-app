@@ -1,3 +1,4 @@
+import moment from 'moment'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/EventItem.module.css'
@@ -18,7 +19,7 @@ export default function EventItem({evt}) {
 
       <div className={styles.info}>
         <span>
-          {new Date(evt.date).toLocaleDateString('en-AU')} at {evt.time}
+          {moment(evt.date).format("DD/MM/yyyy")} at {evt.time}
         </span>
         <h3>{evt.name}</h3>
       </div>
