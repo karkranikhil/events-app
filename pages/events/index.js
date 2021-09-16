@@ -3,7 +3,8 @@ import Layout from '@/components/Layout'
 import { API_URL, PER_PAGE } from '@/config/index'
 import Pagination from '@/components/Pagination'
 
-export default function EventsPage({events, page, total}) {
+export default function EventsPage({events=[], page, total}) {
+
   return (
     <Layout>
     {events.length ===0 && <h3>No Events to Show</h3>}

@@ -5,9 +5,9 @@ import DashboardEvent from '@/components/DashboardEvent'
 import { API_URL } from '@/config/index'
 import styles from '@/styles/Dashboard.module.css'
 
-export default function DashboardPage({ events, token }) {
+export default function DashboardPage({ events=[], token }) {
   const router = useRouter()
-  console.log(events)
+
   const deleteEvent = async (id) => {
     if (confirm('Are you sure?')) {
       const res = await fetch(`${API_URL}/events/${id}`, {

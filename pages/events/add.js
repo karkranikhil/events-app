@@ -78,7 +78,7 @@ export default function AddEventPage({ token }) {
             />
           </div>
           <div>
-            <label htmlFor='performers'>Performers</label>
+            <label htmlFor='performers'>Presenter/Speaker</label>
             <input
               type='text'
               name='performers'

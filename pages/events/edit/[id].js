@@ -29,7 +29,6 @@ export default function EditEventPage({ evt, token }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log("values", values)
 
     // Validation
     const hasEmptyFields = Object.values(values).some(

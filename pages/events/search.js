@@ -4,7 +4,7 @@ import Link from 'next/link'
 import EventItem from '@/components/EventItem'
 import Layout from '@/components/Layout'
 import { API_URL } from '@/config/index'
-export default function SearchPage({events}) {
+export default function SearchPage({events=[]}) {
   const router = useRouter()
   return (
     <Layout title='Search Results'>
